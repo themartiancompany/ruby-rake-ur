@@ -1,7 +1,7 @@
 pkgbase = ruby-rake
 	pkgdesc = Make-like build tool implemented in Ruby
 	pkgver = 13.0.6
-	pkgrel = 2
+	pkgrel = 3
 	url = https://ruby.github.io/rake/
 	arch = any
 	license = MIT
