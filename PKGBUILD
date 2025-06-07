@@ -77,12 +77,8 @@ package() {
   _gemdir="$( \
     ruby \
       -e'puts Gem.default_dir')"
-  if [[ "${_os}" == "GNU/Linux" ]]; then
-    _gem_install_opts+=(
-      --ignore-dependencies
-    )
-  fi
   _gem_install_opts+=(
+    --ignore-dependencies
     --no-user-install
     --no-document
     -i
@@ -91,6 +87,7 @@ package() {
       "${pkgdir}/usr/bin"
   )
   gem \
+    install \
     "${_gem_install_opts[@]}" \
     "${_tarname}.gem"
   rm \
