@@ -87,7 +87,7 @@ package() {
       "${pkgdir}/usr/bin"
   )
   gem \
-    "${_gem_opts[@]}" \
+    "${_gem_install_opts[@]}" \
     "${_tarname}.gem"
   rm \
     "${pkgdir}/${_gemdir}/cache/${_tarname}.gem"
