@@ -77,8 +77,12 @@ package() {
   _gemdir="$( \
     ruby \
       -e'puts Gem.default_dir')"
-  _gem_install_opts=(
-    --ignore-dependencies
+  if [[ "${_os}" == "GNU/Linux" ]]; then
+    _gem_install_opts+=(
+      --ignore-dependencies
+    )
+  fi
+  _gem_install_opts+=(
     --no-user-install
     --no-document
     -i
