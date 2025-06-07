@@ -86,6 +86,9 @@ package() {
     -n
       "${pkgdir}/usr/bin"
   )
+  mkdir \
+    -p \
+    "${pkgdir}/usr/bin"
   gem \
     install \
     "${_gem_install_opts[@]}" \
